@@ -1,11 +1,11 @@
-provider "azurerm" {
-    # The "feature" block is required for AzureRM provider 2.x. 
-    # If you are using version 1.x, the "features" block is not allowed.
-    version = "2.73.0"
-    features {}
-}
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=2.73.0"
+    }
+  }
 
-data "terraform_remote_state" "state" {
   backend = "remote"
   config = {
     organization = "calavia-org"
@@ -13,4 +13,10 @@ data "terraform_remote_state" "state" {
       name = "online-ide"
     }
   }
+
+}
+
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+  features {}
 }

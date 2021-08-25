@@ -6,7 +6,7 @@ variable "password" {
   description = "Azure Kubernetes Service Cluster password"
 }
 variable "default_pool_agent_count" {
-    default = 0
+    default = 1
 }
 
 #variable "ssh_public_key" {
@@ -26,5 +26,5 @@ variable resource_group_name {
 }
 
 variable location {
-    default = "Central US"
+    default = "France Central"
 }

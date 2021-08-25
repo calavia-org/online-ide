@@ -22,6 +22,11 @@ resource "azurerm_kubernetes_cluster" "k8s" {
         vm_size         = "Standard_D2_v2"
     }
 
+    service_principal {
+        client_id     = var.appId
+        client_secret = var.password
+    }
+
     network_profile {
         load_balancer_sku = "Standard"
         network_plugin = "kubenet"

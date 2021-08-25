@@ -6,14 +6,12 @@ terraform {
     }
   }
 
-  backend = "remote"
-  config = {
+  backend "remote" {
     organization = "calavia-org"
     workspaces = {
       name = "online-ide"
     }
   }
-
 }
 
 # Configure the Microsoft Azure Provider

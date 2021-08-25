@@ -1,6 +1,3 @@
-variable "client_id" {}
-variable "client_secret" {}
-
 variable "default_pool_agent_count" {
     default = 0
 }

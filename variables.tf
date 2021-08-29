@@ -6,7 +6,7 @@ variable "password" {
   description = "Azure Kubernetes Service Cluster password"
 }
 variable "default_pool_agent_count" {
-    default = 1
+  default = 1
 }
 
 #variable "ssh_public_key" {
@@ -14,17 +14,17 @@ variable "default_pool_agent_count" {
 #}
 
 variable "dns_prefix" {
-    default = "k8stest"
+  default = "k8stest"
 }
 
-variable cluster_name {
-    default = "online-ide"
+variable "cluster_name" {
+  default = "online-ide"
 }
 
-variable resource_group_name {
-    default = "calavia-org_online-ide"
+variable "resource_group_name" {
+  default = "calavia-org_online-ide"
 }
 
-variable location {
-    default = "France Central"
+variable "location" {
+  default = "France Central"
 }

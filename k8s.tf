@@ -1,6 +1,6 @@
 module "aks" {
-  source = "../.."
-
+  source              = "bcochofel/resource-group/azurerm"
+  version             = "1.4.1"
   name                = "aksspotexample"
   resource_group_name = module.rg.name
   dns_prefix          = "demolab"

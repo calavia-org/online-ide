@@ -11,3 +11,5 @@ https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/ser
 
 
 https://github.com/bcochofel/terraform-azurerm-aks  
+https://www.mediaglasses.blog/2020/09/20/github-codespaces-and-terraform/
+https://github.com/russmckendrick/terraform-codespaces

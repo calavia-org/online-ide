@@ -1,5 +1,5 @@
 module "aks" {
-#  source = "../.."
+  source = "../.."
 
   name                = "aksspotexample"
   resource_group_name = module.rg.name

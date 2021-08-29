@@ -1,38 +1,27 @@
-resource "azurerm_resource_group" "k8s" {
-    name     = var.resource_group_name
-    location = var.location
-}
+module "aks" {
+#  source = "../.."
 
-resource "azurerm_kubernetes_cluster" "k8s" {
-    name                = var.cluster_name
-    location            = azurerm_resource_group.k8s.location
-    resource_group_name = azurerm_resource_group.k8s.name
-    dns_prefix          = var.dns_prefix
+  name                = "aksspotexample"
+  resource_group_name = module.rg.name
+  dns_prefix          = "demolab"
 
-#    linux_profile {
-#        admin_username = "ubuntu"
-#        ssh_key {
-#            key_data = file(var.ssh_public_key)
-#        }
-#    }
+  default_pool_name = "default"
 
-    default_node_pool {
-        name            = "default"
-        node_count      = var.default_pool_agent_count
-        vm_size         = "Standard_D2_v2"
+  node_pools = [
+    {
+      name            = "spot"
+      priority        = "Spot"
+      eviction_policy = "Delete"
+      spot_max_price  = 0.5 # note: this is the "maximum" price
+      node_labels = {
+        "kubernetes.azure.com/scalesetpriority" = "spot"
+      }
+      node_taints = [
+        "kubernetes.azure.com/scalesetpriority=spot:NoSchedule"
+      ]
+      node_count = 1
     }
+  ]
 
-    service_principal {
-        client_id     = var.appId
-        client_secret = var.password
-    }
-
-    network_profile {
-        load_balancer_sku = "Standard"
-        network_plugin = "kubenet"
-    }
-
-    tags = {
-        Environment = "MustBePopulatedAtWorkspace"
-    }
+  depends_on = [module.rg]
 }

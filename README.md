@@ -8,3 +8,8 @@ https://github.com/hashicorp/terraform-provider-azurerm
 
 https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret#configuring-the-service-principal-in-terraform
 https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
+
+
+https://github.com/bcochofel/terraform-azurerm-aks  
+https://www.mediaglasses.blog/2020/09/20/github-codespaces-and-terraform/
+https://github.com/russmckendrick/terraform-codespaces

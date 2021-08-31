@@ -1,0 +1,9 @@
+{
+    "name": "terraform-codespaces",
+    "extensions": [
+      "eamodio.gitlens",
+      "davidanson.vscode-markdownlint",
+      "hashicorp.terraform",
+    ],
+    "postCreateCommand": "/bin/bash ./setup-debian.sh"
+  }

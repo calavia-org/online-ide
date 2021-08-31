@@ -1,4 +1,5 @@
 output "client_key" {
+  sensitive = true
   value = module.aks.client_key
 }
 
@@ -16,6 +17,7 @@ output "cluster_username" {
 
 output "cluster_password" {
   value = module.aks.password
+  sensitive = true
 }
 
 output "host" {

@@ -1,6 +1,6 @@
 output "client_key" {
   sensitive = true
-  value = module.aks.client_key
+  value     = module.aks.client_key
 }
 
 output "client_certificate" {
@@ -16,7 +16,7 @@ output "cluster_username" {
 }
 
 output "cluster_password" {
-  value = module.aks.password
+  value     = module.aks.password
   sensitive = true
 }
 

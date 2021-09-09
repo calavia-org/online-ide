@@ -1,9 +1,14 @@
 {
     "name": "terraform-codespaces",
     "extensions": [
-      "eamodio.gitlens",
-      "davidanson.vscode-markdownlint",
-      "hashicorp.terraform",
-    ],
+		"eamodio.gitlens",
+		"davidanson.vscode-markdownlint",
+		"hashicorp.terraform",
+		"jebbs.plantuml",
+		"qhoekman.language-plantuml",
+		"clysto.plantuml",
+		"well-ar.plantuml",
+		"yzhang.markdown-all-in-one"
+	],
     "postCreateCommand": "/bin/bash ./setup-debian.sh"
   }

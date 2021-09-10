@@ -10,5 +10,9 @@
 		"well-ar.plantuml",
 		"yzhang.markdown-all-in-one"
 	],
+	// Adds VS Code settings.json values into the environment.
+	"settings": {
+		"plantuml.preview": "/usr/bin/plantuml"
+	},
     "postCreateCommand": "/bin/bash ./setup-debian.sh"
   }

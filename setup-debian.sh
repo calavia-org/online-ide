@@ -79,3 +79,6 @@ users:
 EOF
 
 kubectl get pods --all-namespaces
+
+pip install mkdocs
+sudo apt install -y plantuml

@@ -12,7 +12,12 @@
 	],
 	// Adds VS Code settings.json values into the environment.
 	"settings": {
-		"plantuml.preview": "/usr/bin/plantuml"
+		"plantuml.preview": "/usr/bin/plantuml",
+		"plantuml.exportOutDir": "docs/img",
+		"plantuml.exportSubFolder": false,
+		"plantuml.diagramsRoot": "docs/diagrams",
+		"plantuml.exportFormat": "png",
+		"plantuml.render": "Local"
 	},
     "postCreateCommand": "/bin/bash ./setup-debian.sh"
   }

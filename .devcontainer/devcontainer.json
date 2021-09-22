@@ -8,7 +8,9 @@
 		"qhoekman.language-plantuml",
 		"clysto.plantuml",
 		"well-ar.plantuml",
-		"yzhang.markdown-all-in-one"
+		"yzhang.markdown-all-in-one",
+		"dedsec727.jekyll-run",
+		"ginfuru.ginfuru-vscode-jekyll-syntax"
 	],
 	// Adds VS Code settings.json values into the environment.
 	"settings": {
